@@ -14,7 +14,7 @@ dpkg-buildpackage -us -uc
 sudo apt-get remove -y {{package}} || true
 sudo dpkg -i ../{{package}}_{{version}}-1_amd64.deb
 
-test -x /opt/venvs/{{package}}/bin/{{PackageService}}
+test -x /opt/venvs/{{package}}/bin/{{packageService}}
 /opt/venvs/{{package}}/bin/pip list
 
 echo Expect service script exists
