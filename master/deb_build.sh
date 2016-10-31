@@ -7,12 +7,12 @@ set -e
 PACKAGE={{package}}
 VERSION={{version}}
 
-rm ../{{package}}_{{version}}-1_amd64.deb || true
+rm ../{{package}}_{{version}}-1_all.deb || true
 
 dpkg-buildpackage -us -uc
 
 sudo apt-get remove -y {{package}} || true
-sudo dpkg -i ../{{package}}_{{version}}-1_amd64.deb
+sudo dpkg -i ../{{package}}_{{version}}-1_all.deb
 
 test -x /opt/venvs/{{package}}/bin/{{packageService}}
 /opt/venvs/{{package}}/bin/pip list
