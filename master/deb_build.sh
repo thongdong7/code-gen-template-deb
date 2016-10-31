@@ -18,6 +18,6 @@ test -x /opt/venvs/{{package}}/bin/{{packageService}}
 /opt/venvs/{{package}}/bin/pip list
 
 echo Expect service script exists
-test -x /lib/systemd/system/{{package}}.service
+sudo test -x /lib/systemd/system/{{package}}.service
 
 echo Done
