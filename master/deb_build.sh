@@ -17,7 +17,7 @@ sudo dpkg -i ../{{package}}_{{version}}-1_amd64.deb
 test -x /opt/venvs/{{package}}/bin/{{packageService}}
 /opt/venvs/{{package}}/bin/pip list
 
-echo Expect service script exists
-sudo test -x /lib/systemd/system/{{package}}.service
+#echo Expect service script exists
+#sudo test -x /lib/systemd/system/{{package}}.service
 
 echo Done
