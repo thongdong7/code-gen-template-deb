@@ -4,9 +4,6 @@
 
 set -e
 
-PACKAGE={{package}}
-VERSION={{version}}
-
 rm ../{{package}}_{{version}}-1_all.deb || true
 
 dpkg-buildpackage -us -uc
