@@ -1,1 +1,2 @@
+systemctl enable {{package}}
 service {{package}} start
