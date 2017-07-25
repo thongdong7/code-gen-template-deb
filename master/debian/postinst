@@ -1,2 +1,4 @@
-systemctl enable {{package}}
+echo "update-rc.d {{package}} defaults || systemctl enable {{package}}"
+update-rc.d {{package}} defaults || systemctl enable {{package}}.service
+echo "service {{package}} start"
 service {{package}} start
